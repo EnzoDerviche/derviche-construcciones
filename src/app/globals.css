@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+/*
+  Sistema de diseño — Derviche Construcciones
+  Paleta: blanco, grises, negro. Acento: gris metálico / plateado.
+*/
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* Escala de grises de la marca */
+  --color-ink: #0a0a0b;
+  --color-graphite: #18181b;
+  --color-slate: #3f3f46;
+  --color-steel: #71717a;
+  --color-silver: #a1a1aa;
+  --color-mist: #e4e4e7;
+  --color-cloud: #f4f4f5;
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --radius: 1rem;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #0a0a0b;
+}
+
+* {
+  border-color: var(--color-mist);
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Compensa el navbar fijo al saltar a anclas */
+  scroll-padding-top: 5rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+/* Respeta usuarios que prefieren menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@layer utilities {
+  /* Texto con acabado plateado metálico para acentos */
+  .text-silver-gradient {
+    background: linear-gradient(180deg, #52525b 0%, #a1a1aa 60%, #71717a 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Vidrio esmerilado sutil (glassmorphism) */
+  .glass {
+    background: color-mix(in srgb, #ffffff 70%, transparent);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+  }
+
+  .glass-dark {
+    background: color-mix(in srgb, #0a0a0b 40%, transparent);
+    backdrop-filter: blur(12px) saturate(160%);
+    -webkit-backdrop-filter: blur(12px) saturate(160%);
+  }
+
+  /* Grano/ruido muy sutil para dar textura premium al hero */
+  .noise-overlay {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.35'/%3E%3C/svg%3E");
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Barra de scroll discreta */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-silver);
+    border-radius: 9999px;
+    border: 2px solid #fff;
+  }
+}
