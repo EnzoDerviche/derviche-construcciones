@@ -7,7 +7,7 @@ export const site = {
   location: "Berazategui, Buenos Aires, Argentina",
   coverage: "Zona Sur de Buenos Aires y Capital Federal",
   url: "https://derviche-construcciones.vercel.app",
-  email: "derviche.contact@gmail.com",
+  email: "dervicheconstrucciones@gmail.com",
   phoneDisplay: "+54 9 11 2155-5751",
 
   whatsappNumber: "5491121555751",
