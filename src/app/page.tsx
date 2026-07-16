@@ -1,7 +1,7 @@
 import { Hero } from "@/components/sections/hero";
 import { Services } from "@/components/sections/services";
 import { WhyUs } from "@/components/sections/why-us";
-import { Gallery } from "@/components/sections/gallery";
+// import { Gallery } from "@/components/sections/gallery";
 import { Process } from "@/components/sections/process";
 import { About } from "@/components/sections/about";
 import { Testimonials } from "@/components/sections/testimonials";
@@ -13,7 +13,7 @@ export default function Home() {
       <Hero />
       <Services />
       <WhyUs />
-      <Gallery />
+      {/* <Gallery /> */}
       <Process />
       <About />
       <Testimonials />
