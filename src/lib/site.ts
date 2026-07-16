@@ -25,7 +25,16 @@ export const site = {
     facebook: "#",
     linkedin: "#",
   },
+  emailjs: {
+    serviceId: "service_n9l2e4s",
+    templateId: "template_b35nzvc",
+    publicKey: "PfThk_W5p4-WgpSzB",
+  },
 } as const;
+
+/** true cuando EmailJS está configurado con las 3 claves. */
+export const emailjsEnabled =
+  !!site.emailjs.serviceId && !!site.emailjs.templateId && !!site.emailjs.publicKey;
 
 export const navLinks = [
   { label: "Inicio", href: "#inicio" },

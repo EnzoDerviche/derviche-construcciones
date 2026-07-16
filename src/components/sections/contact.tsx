@@ -3,11 +3,12 @@
 import * as React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MapPin, Mail, Phone, Send, CheckCircle2, AlertCircle } from "lucide-react";
+import emailjs from "@emailjs/browser";
 import { Reveal } from "@/components/animations/reveal";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { site, whatsappHref } from "@/lib/site";
+import { site, emailjsEnabled, whatsappHref } from "@/lib/site";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
@@ -18,17 +19,22 @@ export function Contact() {
     e.preventDefault();
     setStatus("submitting");
     const form = e.currentTarget;
-    const data = Object.fromEntries(new FormData(form).entries());
 
     try {
-      // ── Conectá acá tu backend / servicio de emails ───────────────────
-      // Ejemplos:
-      //   EmailJS:  await emailjs.send(SERVICE_ID, TEMPLATE_ID, data, PUBLIC_KEY)
-      //   Resend:   await fetch("/api/contact", { method: "POST", body: JSON.stringify(data) })
-      // ponytail: sin backend todavía; simulamos el envío para tener el UX completo.
-      await new Promise((resolve) => setTimeout(resolve, 1200));
-      if (!data.nombre || !data.email || !data.mensaje) throw new Error("Campos requeridos");
-      // ──────────────────────────────────────────────────────────────────
+      if (emailjsEnabled) {
+        // Envío real vía EmailJS. Lee los campos por su atributo name:
+        // nombre, telefono, email, mensaje (usalos como {{variables}} en la plantilla).
+        await emailjs.sendForm(
+          site.emailjs.serviceId,
+          site.emailjs.templateId,
+          form,
+          { publicKey: site.emailjs.publicKey },
+        );
+      } else {
+        // ponytail: sin claves de EmailJS todavía; simulamos el envío.
+        // Completá site.emailjs en src/lib/site.ts para activar el envío real.
+        await new Promise((resolve) => setTimeout(resolve, 1200));
+      }
       setStatus("success");
       form.reset();
     } catch {
