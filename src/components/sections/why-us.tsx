@@ -37,7 +37,6 @@ const highlights = [
 export function WhyUs() {
   return (
     <section className="relative overflow-hidden bg-ink py-24 text-white sm:py-32">
-      {/* Textura sutil de fondo */}
       <div className="pointer-events-none absolute inset-0 opacity-[0.04] noise-overlay" />
       <div className="pointer-events-none absolute left-1/2 top-0 -z-0 h-72 w-[42rem] -translate-x-1/2 rounded-full bg-white/5 blur-3xl" />
 

@@ -25,10 +25,6 @@ const buttonVariants = cva(
   },
 );
 
-/**
- * Slot mínimo (sin @radix): fusiona las clases del botón con el hijo cuando
- * se usa `asChild`, útil para renderizar enlaces (<a>) con estilo de botón.
- */
 function Slot({
   children,
   className,

@@ -22,8 +22,6 @@ export function Contact() {
 
     try {
       if (emailjsEnabled) {
-        // Envío real vía EmailJS. Lee los campos por su atributo name:
-        // nombre, telefono, email, mensaje (usalos como {{variables}} en la plantilla).
         await emailjs.sendForm(
           site.emailjs.serviceId,
           site.emailjs.templateId,
@@ -31,8 +29,6 @@ export function Contact() {
           { publicKey: site.emailjs.publicKey },
         );
       } else {
-        // ponytail: sin claves de EmailJS todavía; simulamos el envío.
-        // Completá site.emailjs en src/lib/site.ts para activar el envío real.
         await new Promise((resolve) => setTimeout(resolve, 1200));
       }
       setStatus("success");
@@ -52,7 +48,6 @@ export function Contact() {
   return (
     <section id="contacto" className="bg-white py-24 sm:py-32">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-14 px-6 lg:grid-cols-2 lg:gap-20 lg:px-8">
-        {/* Info */}
         <div>
           <Reveal>
             <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-steel">
@@ -110,7 +105,6 @@ export function Contact() {
           </div>
         </div>
 
-        {/* Formulario */}
         <Reveal direction="left">
           <form
             onSubmit={handleSubmit}

@@ -11,7 +11,6 @@ type Photo = { src: string; alt: string; w: number; h: number };
 const url = (id: string, w: number) =>
   `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=80`;
 
-// Imágenes de ejemplo (Unsplash). Reemplazá por fotos de tus obras reales.
 const photos: Photo[] = [
   { src: url("photo-1600585154340-be6161a56a0c", 900), alt: "Living renovado", w: 900, h: 600 },
   { src: url("photo-1503387762-592deb58ef4e", 900), alt: "Obra en ejecución", w: 900, h: 1200 },
@@ -92,7 +91,6 @@ export function Gallery() {
         </div>
       </div>
 
-      {/* Lightbox */}
       <AnimatePresence>
         {index !== null && (
           <motion.div

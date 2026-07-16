@@ -12,7 +12,6 @@ interface CounterProps {
   className?: string;
 }
 
-/** Contador que cuenta de `from` a `to` cuando entra en el viewport. */
 export function Counter({
   to,
   from = 0,

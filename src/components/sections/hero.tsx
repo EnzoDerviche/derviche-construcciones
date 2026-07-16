@@ -27,7 +27,6 @@ export function Hero() {
     offset: ["start start", "end start"],
   });
 
-  // Parallax: la imagen se desplaza y el contenido se desvanece al hacer scroll
   const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "28%"]);
   const contentY = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
   const contentOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
@@ -38,7 +37,6 @@ export function Hero() {
       ref={ref}
       className="relative flex h-screen min-h-[640px] items-center overflow-hidden"
     >
-      {/* Fondo con parallax */}
       <motion.div style={{ y: bgY }} className="absolute inset-0 -z-10 scale-110">
         <Image
           src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2400&q=80"
@@ -48,7 +46,6 @@ export function Hero() {
           sizes="100vw"
           className="object-cover"
         />
-        {/* Overlay oscuro para legibilidad */}
         <div className="absolute inset-0 bg-gradient-to-b from-ink/80 via-ink/65 to-ink/85" />
         <div className="absolute inset-0 opacity-[0.15] noise-overlay" />
       </motion.div>
@@ -101,7 +98,6 @@ export function Hero() {
         </motion.div>
       </motion.div>
 
-      {/* Indicador de scroll */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

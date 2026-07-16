@@ -1,12 +1,10 @@
 import { cn } from "@/lib/utils";
 
 interface LogoProps {
-  /** "dark" para fondos claros, "light" para fondos oscuros (hero). */
   tone?: "dark" | "light";
   className?: string;
 }
 
-/** Logotipo tipográfico minimalista de Derviche Construcciones. */
 export function Logo({ tone = "dark", className }: LogoProps) {
   return (
     <span className={cn("flex flex-col leading-none select-none", className)}>

@@ -3,7 +3,6 @@ import { MapPin } from "lucide-react";
 import { Logo } from "@/components/logo";
 import { navLinks, site } from "@/lib/site";
 
-// lucide 1.x eliminó los iconos de marca; usamos SVGs inline para las redes.
 const socials = [
   {
     label: "Instagram",
@@ -27,7 +26,6 @@ export function Footer() {
     <footer className="border-t border-mist bg-ink text-white">
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
-          {/* Marca */}
           <div className="max-w-sm">
             <Logo tone="light" />
             <p className="mt-5 text-sm leading-relaxed text-white/55">
@@ -42,7 +40,6 @@ export function Footer() {
             <p className="mt-1 pl-6 text-sm text-white/55">{site.coverage}</p>
           </div>
 
-          {/* Links rápidos */}
           <div>
             <h3 className="text-sm font-semibold tracking-wide text-white">
               Navegación
@@ -61,7 +58,6 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Redes */}
           <div>
             <h3 className="text-sm font-semibold tracking-wide text-white">
               Seguinos

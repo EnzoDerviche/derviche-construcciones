@@ -20,7 +20,6 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Bloquea el scroll del body cuando el menú móvil está abierto
   React.useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
     return () => {

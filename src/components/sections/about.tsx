@@ -17,7 +17,6 @@ export function About() {
   return (
     <section id="nosotros" className="bg-white py-24 sm:py-32">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-14 px-6 lg:grid-cols-2 lg:gap-20 lg:px-8">
-        {/* Imagen */}
         <Reveal direction="right">
           <div className="relative">
             <div className="relative aspect-[4/5] overflow-hidden rounded-3xl">
@@ -30,7 +29,6 @@ export function About() {
                 className="object-cover"
               />
             </div>
-            {/* Tarjeta flotante con vidrio esmerilado */}
             <div className="absolute -bottom-6 -left-6 hidden rounded-2xl border border-mist bg-white/80 p-6 shadow-[0_24px_48px_-16px_rgba(0,0,0,0.18)] backdrop-blur sm:block">
               <p className="text-4xl font-semibold tracking-tight text-ink">
                 +30
@@ -40,7 +38,6 @@ export function About() {
           </div>
         </Reveal>
 
-        {/* Texto */}
         <div>
           <Reveal>
             <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-steel">

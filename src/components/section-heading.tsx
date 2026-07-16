@@ -9,7 +9,6 @@ interface SectionHeadingProps {
   className?: string;
 }
 
-/** Encabezado consistente para las secciones (etiqueta + título + bajada). */
 export function SectionHeading({
   eyebrow,
   title,

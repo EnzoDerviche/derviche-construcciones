@@ -36,7 +36,6 @@ interface RevealProps {
   className?: string;
 }
 
-/** Envuelve contenido para animarlo al entrar en viewport (scroll reveal). */
 export function Reveal({
   children,
   direction = "up",
@@ -59,7 +58,6 @@ export function Reveal({
   );
 }
 
-/** Contenedor que revela a sus hijos <StaggerItem/> en cascada. */
 export function Stagger({
   children,
   className,

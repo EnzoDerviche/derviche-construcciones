@@ -98,7 +98,6 @@ export function Services() {
                 transition={{ type: "spring", stiffness: 300, damping: 22 }}
                 className="group relative overflow-hidden rounded-2xl border border-mist/80 bg-white p-8 shadow-[0_1px_2px_rgba(0,0,0,0.04)] transition-shadow duration-300 hover:shadow-[0_24px_48px_-16px_rgba(0,0,0,0.18)]"
               >
-                {/* Halo sutil al hover */}
                 <div className="pointer-events-none absolute -right-16 -top-16 size-40 rounded-full bg-cloud opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-100" />
 
                 <div className="relative">

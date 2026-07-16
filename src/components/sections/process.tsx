@@ -50,9 +50,7 @@ export function Process() {
         />
 
         <div ref={ref} className="relative mt-16 pl-8 sm:pl-0">
-          {/* Línea base */}
           <div className="absolute bottom-4 left-[15px] top-4 w-px bg-mist sm:left-1/2 sm:-translate-x-1/2" />
-          {/* Línea de progreso que se llena al hacer scroll */}
           <motion.div
             style={{ scaleY: lineScale }}
             className="absolute bottom-4 left-[15px] top-4 w-px origin-top bg-ink sm:left-1/2 sm:-translate-x-1/2"
@@ -67,7 +65,6 @@ export function Process() {
                   key={step.title}
                   className="relative sm:grid sm:grid-cols-2 sm:gap-x-12"
                 >
-                  {/* Nodo */}
                   <motion.span
                     initial={{ scale: 0, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}

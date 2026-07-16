@@ -1,9 +1,3 @@
-/**
- * Configuración central del sitio.
- * Editá acá los datos de contacto, servicios, textos, etc.
- * Reemplazá WHATSAPP_NUMBER por el número real (formato internacional, sin +).
- */
-
 export const site = {
   name: "Derviche",
   brand: "Derviche Construcciones",
@@ -16,7 +10,6 @@ export const site = {
   email: "derviche.contact@gmail.com",
   phoneDisplay: "+54 9 11 2155-5751",
 
-  // ponytail: número de ejemplo. Cambialo por el real (país + área + número, sin "+" ni espacios).
   whatsappNumber: "5491121555751",
   whatsappMessage: "Hola, quisiera solicitar un presupuesto.",
 
@@ -32,7 +25,6 @@ export const site = {
   },
 } as const;
 
-/** true cuando EmailJS está configurado con las 3 claves. */
 export const emailjsEnabled =
   !!site.emailjs.serviceId && !!site.emailjs.templateId && !!site.emailjs.publicKey;
 
@@ -43,7 +35,6 @@ export const navLinks = [
   { label: "Contacto", href: "#contacto" },
 ] as const;
 
-/** Enlace de WhatsApp listo para usar. */
 export const whatsappHref = `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(
   site.whatsappMessage,
 )}`;
