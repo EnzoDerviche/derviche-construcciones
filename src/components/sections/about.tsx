@@ -60,6 +60,11 @@ export function About() {
           </Reveal>
           <Reveal delay={0.15}>
             <p className="mt-4 text-base leading-relaxed text-steel">
+              Prestamos servicios en Berazategui, Avellaneda, Quilmes, Lanús,
+              Lomas de Zamora, Florencio Varela, Banfield, Temperley, Adrogué y
+              toda la Zona Sur, además de Capital Federal.
+            </p>
+            <p className="mt-4 text-base leading-relaxed text-steel">
               Creemos que la confianza se construye con hechos: cumpliendo
               plazos, cuidando cada detalle y dejando cada obra impecable.
             </p>

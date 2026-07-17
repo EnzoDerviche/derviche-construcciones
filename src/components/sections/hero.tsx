@@ -6,7 +6,7 @@ import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { whatsappHref } from "@/lib/site";
+import { site, whatsappHref } from "@/lib/site";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -62,24 +62,24 @@ export function Hero() {
           className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-xs font-medium tracking-wide text-white/80 backdrop-blur"
         >
           <span className="size-1.5 rounded-full bg-white" />
-          Construcción y mantenimiento integral · Berazategui
+          Berazategui · Zona Sur · Capital Federal
         </motion.span>
 
         <motion.h1
           variants={item}
           className="mt-6 max-w-4xl text-balance text-5xl font-semibold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl"
         >
-          Construimos confianza.
+          Construcción y mantenimiento integral
           <br />
-          <span className="text-silver-gradient">Renovamos espacios.</span>
+          <span className="text-silver-gradient">en Berazategui, Zona Sur y CABA</span>
         </motion.h1>
 
         <motion.p
           variants={item}
           className="mt-6 max-w-xl text-lg leading-relaxed text-white/75"
         >
-          Electricidad, plomería, pintura, durlock, aire acondicionado y
-          mantenimiento integral para hogares y empresas.
+          {site.tagline} Electricidad, plomería, pintura, durlock, aire
+          acondicionado y mantenimiento para hogares, comercios y empresas.
         </motion.p>
 
         <motion.div

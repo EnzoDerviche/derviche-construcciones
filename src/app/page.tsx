@@ -5,6 +5,7 @@ import { WhyUs } from "@/components/sections/why-us";
 import { Process } from "@/components/sections/process";
 import { About } from "@/components/sections/about";
 import { Testimonials } from "@/components/sections/testimonials";
+import { Faq } from "@/components/sections/faq";
 import { Contact } from "@/components/sections/contact";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <Process />
       <About />
       <Testimonials />
+      <Faq />
       <Contact />
     </>
   );

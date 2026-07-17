@@ -24,7 +24,7 @@ const services: Service[] = [
     icon: Zap,
     title: "Electricidad",
     description:
-      "Instalaciones, tableros, cableado y reparaciones con materiales certificados y normas al día.",
+      "Instalaciones, tableros, cableado y reparaciones en Berazategui, Zona Sur y CABA con materiales certificados y normas al día.",
   },
   {
     icon: Droplets,
@@ -60,7 +60,7 @@ const services: Service[] = [
     icon: AirVent,
     title: "Aire acondicionado",
     description:
-      "Instaladores matriculados: instalación, carga de gas y mantenimiento de equipos split con garantía.",
+      "Instaladores matriculados en Berazategui y Capital Federal: instalación, carga de gas y mantenimiento de equipos split con garantía.",
   },
 ];
 
@@ -78,7 +78,7 @@ export function Services() {
         <SectionHeading
           eyebrow="Servicios"
           title="Todo lo que tu espacio necesita"
-          subtitle="Un único equipo para resolver cada detalle de tu obra o mantenimiento, con la prolijidad de principio a fin."
+          subtitle="Un único equipo en Berazategui para resolver cada detalle de tu obra o mantenimiento en la Zona Sur y Capital Federal, con prolijidad de principio a fin."
         />
 
         <motion.div
